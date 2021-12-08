@@ -15,7 +15,7 @@ class Map extends React.Component {
     async componentDidMount() {
         document.addEventListener('keydown', this.handleKeyDown);
     }
-    zoomin= () => {
+    zoomin = () => {
         console.log(this);
         if (this.state.zoom >= 3) {
             return;
@@ -29,9 +29,9 @@ class Map extends React.Component {
             containerTop: top,
         });
     }
-    
 
-    zoomout= () => {
+
+    zoomout = () => {
         if (this.state.zoom <= 0) {
             return;
         }
@@ -83,9 +83,9 @@ class Map extends React.Component {
         });
     }
     render() {
-        
+
         let zoom = this.state.zoom;
-        let containerWidth = this.state.tileSize * 2**zoom;
+        let containerWidth = this.state.tileSize * 2 ** zoom;
         let imgUrls = [];
         for (let i = 0; i < 2 ** zoom; i++) {
             let urls = [];
@@ -105,7 +105,7 @@ class Map extends React.Component {
                             (urls) => (
                                 urls.map(
                                     (url) => (
-                                        <img src={url} key="map-image"/>
+                                        <img src={url} key="map-image" />
                                     )
                                 )
                             )

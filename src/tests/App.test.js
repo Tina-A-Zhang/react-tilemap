@@ -1,4 +1,4 @@
-import { render, screen} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from '../App';
 
 describe("render app elements", () => {
@@ -16,7 +16,7 @@ describe("render app elements", () => {
   });
 
   test('render map correctly', () => {
-    const {container} = render(<App />)
+    const { container } = render(<App />)
     expect(container.querySelector("Map")).toBeDefined;
   });
 
